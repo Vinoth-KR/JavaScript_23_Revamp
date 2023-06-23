@@ -13,13 +13,13 @@ if (true) {
 run();
 
 //*************FUNCTION SCOPE****************
-function add() {
-    const y = 50;
-    console.log(x + y);
-    console.log(y, 'in function scope');
-}
+// function add() {
+//     const y = 50;
+//     console.log(x + y);
+//     console.log(y, 'in function scope');
+// }
 
-add();
+// add();
 
 
 
