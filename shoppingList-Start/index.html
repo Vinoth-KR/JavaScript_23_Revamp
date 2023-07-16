@@ -22,6 +22,7 @@
       </header>
       <form id="item-form">
         <div class="form-control">
+          <!-- Text Input -->
           <input
             type="text"
             class="form-input"
@@ -30,6 +31,17 @@
             placeholder="Enter Item"
           />
         </div>
+        <!-- Select Input -->
+        <select id="priority-input" name="priority" class="form-input">
+          <option value="0">Select Priority</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <!-- Checkbox Input -->
+
+        <input type="checkbox" id="checkbox" /> Recurring Item
+
         <div class="form-control">
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
@@ -44,12 +56,12 @@
           id="filter"
           placeholder="Filter Items"
         />
-      </div>      
+      </div>
 
       <ul id="item-list" class="items">
         <li>
           Apples
-          <button class="btn-link text-red">
+          <button class="remove-item btn-link text-red">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </li>
@@ -76,6 +88,6 @@
       <button id="clear" class="btn-clear">Clear All</button>
     </div>
 
-    <script src="events.js"></script>
+    <script src="formEvents.js"></script>
   </body>
 </html>
