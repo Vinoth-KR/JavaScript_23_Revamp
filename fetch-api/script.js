@@ -68,6 +68,35 @@
 
 //#region ASYNC & AWAIT
 
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({name:'VKR', age: 28});
+  }, 1000);
+});
+
+
+async function getPromise(){
+  const response = await promise;
+  console.log(response);
+}
+
+//getPromise();
+
+async function getUsersAsync() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  const data = await res.json();
+
+  console.log(data);
+}
+
+function getUsers() {
+  fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => console.log(data));
+}
+
+getUsers();
+getUsersAsync();
 
 //#endregion
 
